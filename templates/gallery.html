@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}Галерия{% endblock %}
+{% block content %}
+<section>
+    <h1>Галерия</h1>
+    <ul class="product-list">
+        <li class="product-item" data-folder="engine">
+            <img src="{{ url_for('static', filename='images/engine/1a.png') }}" alt="Двигатели" class="product-image">
+            <div class="product-name">Сервиз и ремонт на двигатели за яхти </div>
+        </li>
+        
+    </ul>
+     <ul class="product-list">
+        <li class="product-item" data-folder="aggregates">
+            <img src="{{ url_for('static', filename='images/aggregates/1ag.png') }}" alt="Агрегати" class="product-image">
+            <div class="product-name">Сервиз и ремонт на агрегати</div>
+        </li>
+        
+    </ul>
+
+    <!-- Lightbox container -->
+    <div class="lightbox" id="imageGalleryModal">
+        <span class="close-lightbox">&times;</span>
+        <button class="prev-lightbox">&#10094;</button>
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="galleryImage">
+        </div>
+        <button class="next-lightbox">&#10095;</button>
+    </div>
+
+    <!-- Include the lightbox JavaScript file -->
+    <script src="{{ url_for('static', filename='js/lightbox.js') }}"></script>
+</section>
+{% endblock %}

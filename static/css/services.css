@@ -1,0 +1,17 @@
+.services-page {
+    background-image: url('../images/1.png') !important;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* For the services page content */
+.services-page main {
+    background-color: rgba(255, 255, 255, 0.8); /* More opacity for better readability */
+}
+
+/* Make product items stand out more on the services page */
+.services-page .product-item {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+}

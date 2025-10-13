@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michelle Marine Service -Service and repair of your inboard or outboard engine, and more.">
+    <meta name="keywords" content="inboard or outboard engine, Service,repair solutions,Diagnostics and repair of electrical installations, Michelle Marine Service">
+    <meta name="author" content="Michelle Marine Service">
+    <meta name="robots" content="index, follow">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/engine-service.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services-grid.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body{% if request.path == url_for('services') %} class="services-page"{% elif request.path == url_for('contact') %} class="contact-page"{% endif %}>
+    <header id="site-header">
+
+        <nav id="main-nav">
+            <a href="{{ url_for('index') }}">Начало</a>
+            <a href="{{ url_for('services') }}">Услуги</a>
+            <a href="{{ url_for('gallery') }}">Галерия</a>
+            <a href="{{ url_for('contact') }}">Контакти</a>
+        </nav>
+
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        &copy; 2025 Michelle Marine Service.
+    </footer>
+    <script src="{{ url_for('static', filename='js/page-specific.js') }}" defer></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Контакти{% endblock %}
+{% block content %}
+<section>
+     <h1>Свържете се с нас:</h1>
+     <br>
+
+
+     <div class="contact-container">
+         <!-- Business Card -->
+         <div class="business-card">
+             <div class="card-logo">
+                 <img src="{{ url_for('static', filename='images/logo.png') }}" alt="michelle Logo">
+             </div>
+             <div class="card-content">
+                 <h3>Инж. Стефан Ангелов</h3>
+
+                 <div class="card-info">
+                     <p><i class="fa fa-phone"></i><b> тел: 0877 746 856</b></p>
+                     <p><i class="fa fa-envelope"></i><b> имейл: <a href="mailto:michelle.service@abv.bg">michelle.service@abv.bg</a></b></p>
+                     <p><i class="fa fa-map-marker"></i><b> Адрес: <a href="https://maps.app.goo.gl/MFScUKg2thF1tJop9?g_st=afm" target="_blank"
+rel="noopener">с.Твърдица (обл.Бургас)</a></b></p>
+                     <p><i class="fab fa-facebook"></i><b> Facebook: <a href="https://www.facebook.com/profile.php?id=61574836665963" target="_blank"
+rel="noopener">Yacht and Boat Service</a></b></p>
+                 </div>
+             </div>
+         </div>
+
+     </div>
+
+
+</section>
+{% endblock %}

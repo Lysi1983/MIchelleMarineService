@@ -1,0 +1,10 @@
+Flask
+Flask-Mail
+Flask-Limiter
+python-dotenv
+gunicorn
+requests
+APScheduler
+Pillow
+flask-minify
+htmlmin
