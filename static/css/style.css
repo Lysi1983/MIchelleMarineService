@@ -20,9 +20,10 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     color: #2d3436;
     line-height: 1.7;
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -132,6 +133,18 @@ main {
     padding: 15px;
     border-radius: 8px;
     flex: 0.5;
+    animation: fadeInMain 0.5s ease-in;
+}
+
+@keyframes fadeInMain {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 section {
     margin-bottom: 20px;
@@ -213,6 +226,17 @@ form button {
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: brightness(0.95);
     will-change: transform;
+    opacity: 0;
+    animation: fadeInImage 0.6s ease-in forwards;
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .product-image:hover {
@@ -600,6 +624,7 @@ h5 {
 
     body, body.contact-page, .services-page {
       background-attachment: scroll !important;
+      background-repeat: no-repeat;
       min-height: 100vh;  /* Use viewport height instead of percentage */
     }
 
