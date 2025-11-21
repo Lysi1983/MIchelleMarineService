@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="bg">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Michelle Marine Service -Service and repair of your inboard or outboard engine, and more.">
-    <meta name="keywords" content="inboard or outboard engine, Service,repair solutions,Diagnostics and repair of electrical installations, Michelle Marine Service">
+    <meta name="description"
+        content="Michelle Marine Service -Сервиз и ремонт на вашия вътрешен или извънбордов двигател и други.">
+    <meta name="keywords"
+        content="Вътрешен или извънбордов двигател, Сервиз, ремонтни решения, Диагностика и ремонт на електрически инсталации, Michelle Marine Service">
     <meta name="author" content="Michelle Marine Service">
     <meta name="robots" content="index, follow">
     <title>{% block title %}{% endblock %}</title>
@@ -15,7 +18,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/services-grid.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body{% if request.path == url_for('services') %} class="services-page"{% elif request.path == url_for('contact') %} class="contact-page"{% endif %}>
+<body{% if request.path==url_for('services') %} class="services-page" {% elif request.path==url_for('contact') %}
+    class="contact-page" {% endif %}>
     <header id="site-header">
 
         <nav id="main-nav">
@@ -26,13 +30,15 @@
         </nav>
 
     </header>
-    
+
     <main>
         {% block content %}{% endblock %}
     </main>
     <footer>
-        &copy; 2025 Michelle Marine Service.
+        <span>&copy; 2025</span>
+        <span> {L|E|T|S_}</span>
     </footer>
     <script src="{{ url_for('static', filename='js/page-specific.js') }}" defer></script>
-</body>
+    </body>
+
 </html>
